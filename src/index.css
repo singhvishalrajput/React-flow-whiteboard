@@ -1,0 +1,96 @@
+/* General reset */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+/* Styling for the Input Node container */
+.inputNode {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  align-items: center; /* Align button and textarea properly */
+}
+
+/* Dynamic textarea that auto-resizes */
+.inputNode textarea {
+  width: 5rem;
+  min-height: 1.5rem;
+  resize: none; /* Disable manual resizing */
+  overflow: hidden; /* Hide scrollbar while auto-expanding */
+  font-size: 14px;
+  padding: 0.3rem;
+  border: solid 1px black;
+  border-radius: 0.1rem;
+  box-sizing: border-box;
+}
+
+/* Button styling */
+.inputNode button {
+  background-color: transparent;
+  border: solid 1px black;
+  padding: 0 0.5rem;
+  border-radius: 0.1rem;
+}
+
+/* Text node styling for newly created nodes */
+.textNode {
+  width: 8rem;
+  height: auto; /* Adjust based on content */
+  text-align: center;
+  border-radius: 0.5rem;
+  background-color: white;
+  padding: 0.5rem;
+  border: solid 1px black;
+  
+}
+
+
+/* Increase size of React Flow Control buttons */
+.react-flow__controls {
+  transform: scale(1.5); /* Scale controls to 1.5x */
+  padding: 10px; /* Add padding around the controls */
+}
+
+/* Increase Minimap size */
+.react-flow__minimap {
+  width: 200px; /* Increase width */
+  height: 150px; /* Increase height */
+  border: 1px solid black; /* Optional: add border */
+  border-radius: 8px; /* Optional: rounded corners */
+}
+
+/* Style for Day/Night Mode and Download buttons */
+.custom-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.custom-buttons button {
+  width: 50px; /* Increase width of buttons */
+  height: 50px; /* Increase height of buttons */
+  border: none;
+  border-radius: 8px; /* Optional: rounded corners */
+  font-size: 1.2rem; /* Larger font for icons */
+  cursor: pointer;
+  background-color: #f0f0f0; /* Light background */
+  transition: background-color 0.3s;
+}
+
+.custom-buttons button:hover {
+  background-color: #ddd; /* Darker on hover */
+}
